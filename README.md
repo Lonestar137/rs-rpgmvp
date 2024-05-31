@@ -50,6 +50,12 @@ Decrypt specific files:
 Save decrypted files to a custom location(Preserves folder structure):  
 `rs-rpgmvp --decryption-key {key from www/data/System.json} --basepath {folder/with/rpgmvp/files} --output /tmp/DecryptedFilesFolder/`
 
+
+# Its missing something
+
+If you have an idea of how the tool can be better feel free to raise an issue 
+or pull request!
+
 # Credit
 
 For providing a working implementation of the spec:  

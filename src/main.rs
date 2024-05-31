@@ -1,13 +1,13 @@
-use anyhow::Result;
-use glob::glob;
-use hex;
 use std::error::Error;
 use std::fmt;
 use std::fs::{create_dir_all, File};
 use std::io::{Read, Write};
 use std::path::{Path, PathBuf};
 
+use anyhow::Result;
 use clap::{ArgGroup, Parser};
+use glob::glob;
+use hex;
 
 const DEFAULT_HEADER_LEN: usize = 16;
 const DEFAULT_SIGNATURE: &str = "5250474d56000000";
@@ -16,7 +16,7 @@ const DEFAULT_SIGNATURE: &str = "5250474d56000000";
 // const DEFAULT_VERSION: &str = "000301";
 // const DEFAULT_REMAIN: &str = "0000000000";
 
-/// CLI tool for decrypting RPGMVP tools.
+/// CLI tool for decrypting RPGMVP files.
 #[derive(Parser, Debug, Clone)]
 #[command(version, about, long_about = None)]
 #[command(group = ArgGroup::new("input").required(true).args(&["basepath", "files"]))]
