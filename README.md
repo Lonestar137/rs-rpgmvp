@@ -2,8 +2,8 @@
 
 rs-rpgmvp is a commandline tool(CLI) for decrypting rpg maker(.rpgmvp) files.
 
-# Building
-Install the latest rust toolset from rustup:
+# Installing
+Install the latest rust toolset from rustup:  
 [rustup.rs](https://rustup.rs/)
 
 
@@ -11,6 +11,8 @@ Run the below commands:
 ```
 cargo install --git https://github.com/Lonestar137/rs-rpgmvp.git
 ```
+
+Ensure that the Cargo bin(`~/.cargo/bin` on Linux) is on your users PATH.
 
 # How to use
 
@@ -39,16 +41,16 @@ Options:
   
 ```
 
-Decrypt an entire directory of files:
+Decrypt an entire directory of files:  
 `rs-rpgmvp --decryption-key {key from www/data/System.json} --basepath {folder/with/rpgmvp/files}`
 
-Decrypt specific files:
+Decrypt specific files:  
 `rs-rpgmvp --decryption-key {key from www/data/System.json} --files {path/file1} {path/file2}`
 
-Save decrypted files to a custom location(Preserves folder structure):
+Save decrypted files to a custom location(Preserves folder structure):  
 `rs-rpgmvp --decryption-key {key from www/data/System.json} --basepath {folder/with/rpgmvp/files} --output /tmp/DecryptedFilesFolder/`
 
 # Credit
 
-For providing a working implementation of the spec:
+For providing a working implementation of the spec:  
 [Petschko RPGMVP Decrypter](https://github.com/Petschko/RPG-Maker-MV-Decrypter)
